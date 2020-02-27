@@ -1,0 +1,66 @@
+<?xml version="1.0"?>
+<block>
+  <name>CRC Checksum Header Checker</name>
+  <key>limesdrmod_checksum_crc_header_checker_bb</key>
+  <category>[LimeSuite]</category>
+  <import>import limesdrmod</import>
+  <make>limesdrmod.checksum_crc_header_checker_bb($tag_key, $tag_length,
+  			$crc_bytes, $identifier_key)</make>
+
+  <param>
+  	<name>Tag name</name>
+  	<key>tag_key</key>
+  	<value>header_len</value>
+  	<type>string</type>
+  </param>
+  
+  <param>
+  	<name>Tag length</name>
+  	<key>tag_length</key>
+  	<value>10</value>
+  	<type>int</type>
+  </param>
+  
+  <param>
+  	<name>Nr of CRC bytes</name>
+  	<key>crc_bytes</key>
+  	<value>1</value>
+  	<type>int</type>
+	<option>
+		<name>1</name>
+		<key>1</key>
+	</option>
+	<option>
+		<name>2</name>
+		<key>2</key>
+	</option>
+	<option>
+		<name>3</name>
+		<key>3</key>
+	</option>
+	<option>
+		<name>4</name>
+		<key>4</key>
+	</option>
+  </param>
+  
+  <param>
+  	<name>Identifier Tag</name>
+  	<key>identifier_key</key>
+  	<value>tag_identifier</value>
+  	<type>string</type>
+  </param>
+  
+  <sink>
+    <name>in</name>
+    <type>byte</type>
+    <nports>2</nports>
+  </sink>
+
+  <source>
+    <name>out</name>
+    <type>byte</type>
+    <nports>2</nports>
+  </source>
+  
+</block>

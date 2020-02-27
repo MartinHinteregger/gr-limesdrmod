@@ -1,0 +1,59 @@
+<?xml version="1.0"?>
+<block>
+  <name>CRC Checksum Append</name>
+  <key>limesdrmod_checksum_crc_append_bb</key>
+  <category>[LimeSuite]</category>
+  <import>import limesdrmod</import>
+  <make>limesdrmod.checksum_crc_append_bb(
+  		$nr_bytes, $tag_key, $tag_length)</make>
+
+  <param>
+  	<name>Number of bytes</name>
+  	<key>nr_bytes</key>
+  	<value>1</value>
+  	<type>int</type>
+	<option>
+		<name>1</name>
+		<key>1</key>
+	</option>
+	<option>
+		<name>2</name>
+		<key>2</key>
+	</option>
+	<option>
+		<name>3</name>
+		<key>3</key>
+	</option>
+	<option>
+		<name>4</name>
+		<key>4</key>
+	</option>
+  </param>
+  
+  <param>
+  	<name>Tag name</name>
+  	<key>tag_key</key>
+  	<value>header_len</value>
+  	<type>string</type>
+  </param>
+  
+  <param>
+  	<name>Tag length</name>
+  	<key>tag_length</key>
+  	<value>10</value>
+  	<type>int</type>
+  </param>
+  
+  <sink>
+    <name>in</name>
+    <type>byte</type>
+    <nports>1</nports>
+  </sink>
+
+  <source>
+    <name>out</name>
+    <type>byte</type>
+    <nports>1</nports>
+  </source>
+  
+</block>

@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<block>
+  <name>Bitshifter</name>
+  <key>limesdrmod_bitshifter</key>
+  <category>[LimeSuite]</category>
+  <import>import limesdrmod</import>
+  <make>limesdrmod.bitshifter($num_bits)</make>
+
+  <param>
+    <name>Number of bits</name>
+    <key>num_bits</key>
+    <value>1</value>
+    <type>int</type>
+  </param>
+
+  <check> $num_bits > 0 </check>
+  <check> 7 >= $num_bits </check>
+
+  <sink>
+    <name>in</name>
+    <type>byte</type>
+    <nports>1</nports>
+  </sink>
+
+  <source>
+    <name>out</name>
+    <type>byte</type>
+    <nports>1</nports>
+  </source>
+  
+</block>

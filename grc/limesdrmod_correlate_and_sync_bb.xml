@@ -1,0 +1,64 @@
+<?xml version="1.0"?>
+<block>
+  <name>Correlate and Sync</name>
+  <key>limesdrmod_correlate_and_sync_bb</key>
+  <category>[LimeSuite]</category>
+  <import>import limesdrmod</import>
+  <make>limesdrmod.correlate_and_sync_bb($sync,
+  			$packet_len, $length_tag_name,
+  			$header_tag_name, $header_len, $checksum_len)</make>
+
+  <param>
+    <name>Binary Syncword</name>
+    <key>sync</key>
+    <value>[0, 1, 0, 1, 0, 1, 0, 1]</value>
+    <type>complex_vector</type>
+  </param>
+
+  <param>
+    <name>Packet length after Sync</name>
+    <key>packet_len</key>
+    <value>50</value>
+    <type>int</type>
+  </param>
+  
+  <param>
+  	<name>Packet tag name</name>
+  	<key>length_tag_name</key>
+  	<value>packet_len</value>
+  	<type>string</type>
+  </param>
+  
+  <param>
+  	<name>Header tag name</name>
+  	<key>header_tag_name</key>
+  	<value>header_len</value>
+  	<type>string</type>
+  </param>
+  
+  <param>
+  	<name>Header length in bytes</name>
+  	<key>header_len</key>
+  	<value>1</value>
+  	<type>int</type>
+  </param>
+  
+  <param>
+  	<name>Checksum length in bytes</name>
+  	<key>checksum_len</key>
+  	<value>1</value>
+  	<type>int</type>
+  </param>
+
+  <sink>
+    <name>in</name>
+    <type>byte</type>
+    <nports>1</nports>
+  </sink>
+
+  <source>
+    <name>out</name>
+    <type>byte</type>
+    <nports>1</nports>
+  </source>
+</block>

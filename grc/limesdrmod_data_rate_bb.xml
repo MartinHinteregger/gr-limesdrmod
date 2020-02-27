@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<block>
+  <name>Data Rate Eval</name>
+  <key>limesdrmod_data_rate_bb</key>
+  <category>[LimeSuite]</category>
+  <import>import limesdrmod</import>
+  <make>limesdrmod.data_rate_bb()</make>
+
+  <sink>
+    <name>in</name>
+    <type>byte</type>
+  </sink>
+
+  <source>
+    <name>out</name>
+    <type>float</type>
+    <nports>2</nports>
+  </source>
+</block>

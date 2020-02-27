@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<block>
+  <name>Delayed Blocker</name>
+  <key>limesdrmod_delayed_blocker_bb</key>
+  <category>[LimeSuite]</category>
+  <import>import limesdrmod</import>
+  <make>limesdrmod.delayed_blocker_bb($delay_ms)</make>
+
+  <param>
+    <name>Delay time in ms</name>
+    <key>delay_ms</key>
+    <value>10000</value>
+    <type>int</type>
+  </param>
+
+  <sink>
+    <name>in</name>
+    <type>byte</type>
+    <nports>1</nports>
+  </sink>
+
+  <source>
+    <name>out</name>
+    <type>byte</type>
+    <nports>1</nports>
+  </source>
+</block>

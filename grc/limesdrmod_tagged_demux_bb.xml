@@ -1,0 +1,41 @@
+<?xml version="1.0"?>
+<block>
+  <name>Tagged Demux</name>
+  <key>limesdrmod_tagged_demux_bb</key>
+  <category>[LimeSuite]</category>
+  <import>import limesdrmod</import>
+  <make>limesdrmod.tagged_demux_bb($tag_out0, $tag_out1, $tag_identifier)</make>
+
+  <param>
+  	<name>Tag Name out0</name>
+  	<key>tag_out0</key>
+  	<value>header_len</value>
+  	<type>string</type>
+  </param>
+  
+  <param>
+  	<name>Tag Name out1</name>
+  	<key>tag_out1</key>
+  	<value>packet_len</value>
+  	<type>string</type>
+  </param>
+    
+  <param>
+  	<name>Identifier Tag Name</name>
+  	<key>tag_identifier</key>
+  	<value>packet_id</value>
+  	<type>string</type>
+  </param>
+
+  <sink>
+    <name>in</name>
+    <type>byte</type>
+    <nports>1</nports>
+  </sink>
+
+  <source>
+    <name>out</name>
+    <type>byte</type>
+    <nports>2</nports>
+  </source>
+</block>

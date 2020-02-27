@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<block>
+  <name>Variable Source</name>
+  <key>limesdrmod_variable_source</key>
+  <category>[LimeSuite]</category>
+  <import>import limesdrmod</import>
+  <make>limesdrmod.variable_source($value)</make>
+
+  <callback>set_value($value)</callback>
+       
+  <param>
+    <name>Value</name>
+    <key>value</key>
+    <value>0</value>
+    <type>int</type>
+  </param>
+
+  <source>
+    <name>out</name>
+    <type>int</type>
+    <nports>1</nports>
+  </source>
+</block>

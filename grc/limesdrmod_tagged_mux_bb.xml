@@ -1,0 +1,41 @@
+<?xml version="1.0"?>
+<block>
+  <name>Tagged Mux</name>
+  <key>limesdrmod_tagged_mux_bb</key>
+  <category>[LimeSuite]</category>
+  <import>import limesdrmod</import>
+  <make>limesdrmod.tagged_mux_bb($tag_in0, $tag_in1, $guard)</make>
+
+  <param>
+  	<name>Tag Name in0</name>
+  	<key>tag_in0</key>
+  	<value>header_len</value>
+  	<type>string</type>
+  </param>
+  
+  <param>
+  	<name>Tag Name in1</name>
+  	<key>tag_in1</key>
+  	<value>packet_len</value>
+  	<type>string</type>
+  </param>
+  
+  <param>
+  	<name>Guard sequence</name>
+  	<key>guard</key>
+  	<value>[0, 0]</value>
+  	<type>complex_vector</type>
+  </param>
+
+  <sink>
+    <name>in</name>
+    <type>byte</type>
+    <nports>2</nports>
+  </sink>
+
+  <source>
+    <name>out</name>
+    <type>byte</type>
+    <nports>1</nports>
+  </source>
+</block>
